@@ -1,21 +1,19 @@
 @import 'src/variables.scss';
-
-header {
-    background: $beige-light;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 
 .container {
     display: flex;
-    height: 4rem;
+    height: 7rem;
+    border-bottom: 1px solid $blue;
     justify-content: space-between;
     align-items: center;
     a {
         flex: 0;
         align-self: center;
-        font-size: 2rem;
+        font-family: 'Protest Revolution', sans-serif;
+        font-size: 5rem;
         font-weight: 600;
-        color: $brown-dark;
+        color: $blue;
     }
     .left-side {
         flex: 1;
@@ -29,8 +27,8 @@ header {
         justify-content: flex-end;
         align-items: center;
         span {
-            color: $brown-dark;
-            font-size: 2.5rem;
+            color: $blue;
+            font-size: 3rem;
         }
     }
 }
