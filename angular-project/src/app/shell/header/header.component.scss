@@ -4,7 +4,7 @@
 .container {
     display: flex;
     height: 7rem;
-    border-bottom: 1px solid $blue;
+    border-bottom: 1px solid $dark-brown;
     justify-content: space-between;
     align-items: center;
     a {
@@ -13,7 +13,7 @@
         font-family: 'Protest Revolution', sans-serif;
         font-size: 5rem;
         font-weight: 600;
-        color: $blue;
+        color: $dark-brown;
     }
     .left-side {
         flex: 1;
@@ -27,7 +27,7 @@
         justify-content: flex-end;
         align-items: center;
         span {
-            color: $blue;
+            color: $dark-brown;
             font-size: 3rem;
         }
     }
