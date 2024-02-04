@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './shell/sidebar/sidebar.component';
 import { HomeComponent } from './shell/home/home.component';
 import { StarRatingComponent } from './shell/partials/star-rating/star-rating.component';
-
+import { SearchComponent } from './shell/home/search/search.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +18,15 @@ import { StarRatingComponent } from './shell/partials/star-rating/star-rating.co
     HeaderComponent,
     SidebarComponent,
     HomeComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

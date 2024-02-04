@@ -3,7 +3,7 @@
 
 .container {
     display: flex;
-    height: 7rem;
+    height: 5rem;
     border-bottom: 1px solid $dark-brown;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@
         flex: 0;
         align-self: center;
         font-family: 'Protest Revolution', sans-serif;
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 600;
         color: $dark-brown;
     }
@@ -28,7 +28,8 @@
         align-items: center;
         span {
             color: $dark-brown;
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-variation-settings: 'FILL' 1;
         }
     }
 }

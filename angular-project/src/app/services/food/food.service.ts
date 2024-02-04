@@ -19,7 +19,7 @@ export class FoodService {
           favorite: false,
           origins: ['italy'],
           stars: 4.5,
-          imageUrl: '../assets/images/burger.webp',
+          imageUrl: '../assets/images/pizza.jpg',
           tags: ['FastFood', 'Pizza', 'Lunch'],
         },
         {
@@ -28,9 +28,9 @@ export class FoodService {
           price: 20,
           cookTime: '20-30',
           favorite: true,
-          origins: ['persia', 'middle east', 'china'],
+          origins: ['persia'],
           stars: 4.7,
-          imageUrl: '../assets/images/chorrizo.jpg',
+          imageUrl: '../assets/images/meatball.jpg',
           tags: ['SlowFood', 'Lunch'],
         },
         {
@@ -39,9 +39,9 @@ export class FoodService {
           price: 5,
           cookTime: '10-15',
           favorite: false,
-          origins: ['germany', 'us'],
+          origins: ['germany'],
           stars: 3.5,
-          imageUrl: '../assets/images/spaghetti.jpeg',
+          imageUrl: '../assets/images/burger.webp',
           tags: ['FastFood', 'Hamburger'],
         },
         {
@@ -50,9 +50,9 @@ export class FoodService {
           price: 2,
           cookTime: '15-20',
           favorite: true,
-          origins: ['belgium', 'france'],
+          origins: ['belgium'],
           stars: 3.3,
-          imageUrl: '../assets/images/veggies.jpg',
+          imageUrl: '../assets/images/potatoes.jpg',
           tags: ['FastFood', 'Fry'],
         }
     ]
