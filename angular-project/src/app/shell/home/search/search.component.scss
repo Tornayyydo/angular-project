@@ -1,0 +1,88 @@
+@import '../../../../variables.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    button {
+        color: $dark-beige;
+        background-color: $dark-brown;
+        height: 3rem;
+        width: 5rem;
+        border-radius: 0 10rem 10rem 0;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+            background-color: $light-brown;
+        }
+    }
+    .clear {
+        background-color: $dark-beige;
+        color: $dark-brown;
+        border-radius: 10rem 10rem 10rem 10rem;
+        margin-left: 1rem;
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+        z-index: 2;
+        &:hover {
+            background-color: $dark-beige;
+            opacity: 0.8;
+        }
+    }
+}
+
+.search {
+    display: table;
+    input {
+        background: none;
+        border: none;
+        outline: none;
+        width: 1.75rem;
+        min-width: 0;
+        padding: 0;
+        z-index: 1;
+        position: relative;
+        line-height: 1.125rem;
+        margin: 0.3125rem 0;
+        font-size: 1.5rem;
+        transition: all .6s ease;
+        cursor: pointer;
+        color: $dark-brown;
+        & + div {
+            position: relative;
+            height: 1.75rem;
+            width: 100%;
+            margin: -1.75rem 0 0 0;
+            svg {
+                display: block;
+                position: absolute;
+                height: 1.75rem;
+                width: 19.5rem;
+                right: 0;
+                top: 0;
+                fill: none;
+                stroke: $dark-brown;
+                stroke-width: 0.1rem;
+                stroke-dashoffset: 212.908 + 59;
+                stroke-dasharray: 59 212.908;
+                transition: all .6s ease;
+                transform: scale(2.2);
+            }
+        }
+        &:not(:placeholder-shown),
+        &:focus {
+            width: 19.5rem;
+            padding: 0 0.25rem;
+            cursor: text;
+            &+ div {
+                svg {
+                    stroke-dasharray: 150 212.908;
+                    stroke-dashoffset: 300;
+                }
+            }
+        }
+    }
+}
