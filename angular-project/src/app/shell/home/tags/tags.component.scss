@@ -1,22 +1,43 @@
 @import '../../../../variables.scss';
 
-div {
+.regular-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem 0;
+    a {
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        margin: 0.3rem 0.3rem;
+        border: 2px solid $dark-brown;
+        border-radius: 10rem;
+        color: $beige;
+        background-color: $dark-brown;
+        opacity: 0.9;
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+            background-color: $light-brown;
+        }
+    }
 }
 
-a {
-    text-decoration: none;
-    padding: 0.3rem 1rem;
-    margin: 0.3rem 0.3rem;
-    border: 2px solid $dark-brown;
-    border-radius: 10rem;
-    color: $beige;
-    background-color: $dark-brown;
-    opacity: 0.9;
-    &:hover {
-        background-color: $light-brown;
+.food-page-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0.8rem 0;
+    a {
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        margin: 0.3rem 0.3rem;
+        border: 2px solid $dark-brown;
+        border-radius: 10rem;
+        color: $beige;
+        background-color: $dark-brown;
+        opacity: 0.9;
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+            background-color: $light-brown;
+        }
     }
 }
