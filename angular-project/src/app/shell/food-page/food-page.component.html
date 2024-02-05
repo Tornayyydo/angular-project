@@ -25,19 +25,20 @@
           {{ origin }}
         </span>
       </div>
+      <div class="tags">
+        <app-tags [foodPageTags]="food.tags"></app-tags>
+      </div>
       <div class="cook-time">
         <span class="material-symbols-outlined"> schedule </span>
-        <p>{{ food.cookTime }}</p>
+        <p>{{ food.cookTime }} mins</p>
       </div>
     </div>
-    <div class="tags">
-      <app-tags [foodPageTags]="food.tags"></app-tags>
-    </div>
     <div class="price">
+      <p>Price:</p>
       <span>
         {{ food.price | currency }}
       </span>
     </div>
-    <button>Add to Cart</button>
+    <button class="cart">Add to Cart</button>
   </div>
 </div>
