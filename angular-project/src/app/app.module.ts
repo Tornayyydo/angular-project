@@ -11,6 +11,8 @@ import { HomeComponent } from './shell/home/home.component';
 import { StarRatingComponent } from './shell/partials/star-rating/star-rating.component';
 import { SearchComponent } from './shell/home/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { TagsComponent } from './shell/home/tags/tags.component';
+import { FoodPageComponent } from './shell/food-page/food-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     HomeComponent,
     StarRatingComponent,
-    SearchComponent
+    SearchComponent,
+    TagsComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,
