@@ -1,0 +1,43 @@
+<div class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{ food.name }}
+      </span>
+      <span
+        class="{{
+          food.favorite
+            ? 'material-symbols-outlined filled'
+            : 'material-symbols-outlined'
+        }}"
+        (click)="onClick(food)"
+      >
+        favorite
+      </span>
+    </div>
+    <div class="stars">
+      <star-rating [stars]="food.stars" />
+    </div>
+    <div class="product-item-footer">
+      <div class="origins">
+        <span *ngFor="let origin of food.origins">
+          {{ origin }}
+        </span>
+      </div>
+      <div class="cook-time">
+        <span class="material-symbols-outlined"> schedule </span>
+        <p>{{ food.cookTime }}</p>
+      </div>
+    </div>
+    <div class="tags">
+      <app-tags [foodPageTags]="food.tags"></app-tags>
+    </div>
+    <div class="price">
+      <span>
+        {{ food.price | currency }}
+      </span>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+</div>
