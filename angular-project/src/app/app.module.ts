@@ -13,6 +13,9 @@ import { SearchComponent } from './shell/home/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './shell/home/tags/tags.component';
 import { FoodPageComponent } from './shell/food-page/food-page.component';
+import { CartPageComponent } from './shell/cart-page/cart-page.component';
+import { NotFoundComponent } from './shell/not-found/not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,9 @@ import { FoodPageComponent } from './shell/food-page/food-page.component';
     StarRatingComponent,
     SearchComponent,
     TagsComponent,
-    FoodPageComponent
+    FoodPageComponent,
+    CartPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
