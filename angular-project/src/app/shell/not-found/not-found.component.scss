@@ -1,0 +1,24 @@
+@import '../../../variables.scss';
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    height: 20vh;
+    a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: $beige;
+        background-color: $dark-brown;
+        border-radius: 10rem;
+        padding: 0.7rem 1rem;
+        margin: 1rem;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: $light-brown;
+        }
+    }
+}
