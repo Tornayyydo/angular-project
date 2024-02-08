@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "2b2b",
+      "fullName": "test",
+      "email": "user@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "f8ce",
+      "fullName": "nodo",
+      "email": "nodo@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "daf7",
+      "fullName": "nodari",
+      "email": "hhh@gmail.com",
+      "password": "123"
+    }
+  ]
+}
