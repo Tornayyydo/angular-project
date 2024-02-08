@@ -3,6 +3,7 @@ import { FoodService } from '../../services/food/food.service';
 import { Food } from '../../shared/models/Food';
 import { ActivatedRoute } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-home',
@@ -20,9 +21,12 @@ export class HomeComponent implements OnInit{
   foods:Food[] = []
   noFood:boolean = false
 
-  constructor(private foodService: FoodService, private route: ActivatedRoute) {}
+  constructor(private foodService: FoodService,
+  private route: ActivatedRoute,
+  private sidebarService: SidebarService) {}
 
   ngOnInit(): void {
+    this.sidebarService.collapsed = true
     setTimeout(() => {
       this.showContent = true;
     }, 0);

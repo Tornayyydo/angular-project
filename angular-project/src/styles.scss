@@ -65,12 +65,13 @@ a {
   width: 0.5rem;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: $dark-brown;
   border-radius: 1rem;
-}
-::-webkit-scrollbar-track {
-  background-color: $beige; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
