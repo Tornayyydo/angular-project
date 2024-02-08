@@ -1,6 +1,13 @@
 @import 'src/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: $beige;
+    z-index: 100;
+}
+
 .container {
     display: flex;
     height: 5rem;
@@ -20,6 +27,19 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        span {
+            color: $dark-brown;
+            font-size: 2.5rem;
+            margin-left: 0.6rem;
+            padding: 0.7rem;
+            border-radius: 50%;
+            font-variation-settings: 'FILL' 1;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $dark-beige;
+            }
+        }
     }
     .right-side {
         flex: 1;
