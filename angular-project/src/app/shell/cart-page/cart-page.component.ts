@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { FoodService } from 'src/app/services/food/food.service';
+import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 import { Cart } from 'src/app/shared/models/Cart';
 import { CartItem } from 'src/app/shared/models/CartItem';
 
@@ -11,12 +12,14 @@ import { CartItem } from 'src/app/shared/models/CartItem';
 })
 export class CartPageComponent implements OnInit{
   cart!:Cart
-  constructor(private cartService: CartService, private foodService: FoodService) {
+  constructor(private cartService: CartService,
+     private foodService: FoodService,
+     private sidebarService: SidebarService) {
     this.setCart()
   }
 
   ngOnInit(): void {
-  
+    this.sidebarService.collapsed = true
   }
 
   removeFromCart(cartItem:CartItem) {
