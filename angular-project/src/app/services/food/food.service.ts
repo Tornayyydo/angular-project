@@ -23,7 +23,6 @@ export class FoodService {
       { name: 'SlowFood', count: 2 },
       { name: 'Hamburger', count: 1 },
       { name: 'Fry', count: 1 },
-      { name: 'Soup', count: 1 },
     ]
   }
 

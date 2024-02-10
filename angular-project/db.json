@@ -11,6 +11,12 @@
       "fullName": "nodari",
       "email": "test@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "77cb",
+      "fullName": "sandro",
+      "email": "sandrosandala22@gmail.com",
+      "password": "123"
     }
   ]
 }
