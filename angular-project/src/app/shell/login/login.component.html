@@ -1,39 +1,44 @@
-<!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-  <div>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="login-form">
+  <div class="form-group">
     <label for="email">Email:</label>
     <input
       type="text"
       name="email"
       formControlName="email"
-      placeholder="Type your email"
+      placeholder="Enter your email"
+      class="form-control"
     />
-    <small *ngIf="emile.invalid && (emile.dirty || emile.touched)">
-      <div *ngIf="emile.errors?.['required']">Emile is required</div>
-      <div *ngIf="emile.errors?.['emile']" style="color: red">
-        Emile should be valid
-      </div>
+    <small
+      *ngIf="emile.invalid && (emile.dirty || emile.touched)"
+      class="error-message"
+    >
+      <div *ngIf="emile.errors?.['required']">Email is required</div>
+      <div *ngIf="emile.errors?.['email']">Invalid email format</div>
     </small>
   </div>
-  <div class="input">
+  <div class="form-group">
     <label for="password">Password:</label>
     <input
       type="password"
       name="password"
       formControlName="password"
-      placeholder="Type your password"
+      placeholder="Enter your password"
+      class="form-control"
     />
-    <small *ngIf="password.invalid && (password.dirty || password.touched)">
+    <small
+      *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="error-message"
+    >
       <div *ngIf="password.errors?.['required']">Password is required</div>
-      <div *ngIf="password.errors?.['emile']" style="color: red">
-        Emile should be valid
-      </div>
     </small>
   </div>
-  <button label="Sing in" [disabled]="loginForm.invalid" type="submit">
-    SING IN
+  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">
+    Sign In
   </button>
-  <div>Not a mamber? <a routerLink="/register">Register</a></div>
-</form> -->
+  <div class="register-link">
+    Not a member? <a routerLink="/register">Register</a>
+  </div>
+</form>
 
 <!-- <form class="container" [formGroup]="loginForm" (ngSubmit)="loginUser()">
   <div class="form-outline mb-4">
@@ -83,8 +88,10 @@
       Sign in
     </button>
   </div>
-</form> -->
-<form
+</form>
+
+
+<!-- <form
   class="vh-100 gradient-custom"
   [formGroup]="loginForm"
   (ngSubmit)="loginUser()"
@@ -165,4 +172,4 @@
       </div>
     </div>
   </div>
-</form>
+</form> -->

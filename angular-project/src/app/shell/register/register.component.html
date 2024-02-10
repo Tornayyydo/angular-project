@@ -1,26 +1,33 @@
-<!-- <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
-  <div>
-    <label for="fullName">fullName:</label>
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="submitDetails()"
+  class="register-form"
+>
+  <div class="form-group">
+    <label for="fullName">Full Name:</label>
     <input
-      type="fullName"
+      type="text"
       name="fullName"
       formControlName="fullName"
-      placeholder="Type your fullName"
+      placeholder="Enter your full name"
+      class="form-control"
     />
-    <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
+    <small
+      *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)"
+      class="error-message"
+    >
       <div *ngIf="fullName.errors?.['required']">Name is required</div>
-      <div *ngIf="fullName.errors?.['pattern']" style="color: red">
-        Enter valid name
-      </div>
+      <div *ngIf="fullName.errors?.['pattern']">Enter a valid name</div>
     </small>
   </div>
-  <div>
+  <div class="form-group">
     <label for="email">Email:</label>
     <input
       type="text"
       name="email"
       formControlName="email"
-      placeholder="Type your email"
+      placeholder="Enter your email"
+      class="form-control"
     />
     <small *ngIf="emile.invalid && (emile.dirty || emile.touched)">
       <div *ngIf="emile.errors?.['required']">Emile is required</div>
@@ -29,57 +36,65 @@
       </div>
     </small>
   </div>
-  <div>
+  <div class="form-group">
     <label for="password">Password:</label>
     <input
       type="password"
       name="password"
       formControlName="password"
-      placeholder="Type your password"
+      placeholder="Enter your password"
+      class="form-control"
     />
-    <small *ngIf="password.invalid && (password.dirty || password.touched)">
+    <small
+      *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="error-message"
+    >
       <div *ngIf="password.errors?.['required']">Password is required</div>
-      <div *ngIf="password.errors?.['emile']" style="color: red">
-        Emile should be valid
-      </div>
     </small>
   </div>
-
-  <div>
+  <div class="form-group">
     <label for="confirmPassword">Confirm Password:</label>
     <input
       type="password"
       name="confirmPassword"
       formControlName="confirmPassword"
-      placeholder="Confirm Password"
+      placeholder="Confirm your password"
+      class="form-control"
     />
     <small
       *ngIf="
         confirmPassword.invalid &&
         (confirmPassword.dirty || confirmPassword.touched)
       "
+      class="error-message"
     >
       <div *ngIf="confirmPassword.errors?.['required']">
-        confirm the Password
+        Please confirm your password
       </div>
     </small>
     <small
-      *ngIf="registerForm.errors?.['passwordMissmatch'] && confirmPassword.valid && password.valid"
+      *ngIf="registerForm.errors?.['passwordMismatch']"
+      class="error-message"
+      >Passwords must match</small
     >
-      Password should match
-    </small>
   </div>
-  <button label="register" [disabled]="registerForm.invalid" type="submit">
-    SING IN
+  <button
+    type="submit"
+    [disabled]="registerForm.invalid"
+    class="btn btn-primary"
+  >
+    Register
   </button>
-  <div>Alredy a member? <a routerLink="/login">Log in</a></div>
-</form> -->
+  <div class="login-link">
+    Already a member? <a routerLink="/login">Log in</a>
+  </div>
+</form>
 
 <!-- სერვერის ჩართვა დალოგინებისთვის ამის გარეშე არ მუშაობს დალოგინება!!!
   npx json-server db.json
  -->
 
-<form
+<!-- <form
   [formGroup]="registerForm"
   (ngSubmit)="submitDetails()"
   class="vh-100 gradient-custom"
@@ -196,7 +211,7 @@
               >
                 Login
               </button> -->
-              <button
+<!-- <button
                 label="register"
                 [disabled]="registerForm.invalid"
                 type="submit"
@@ -220,4 +235,4 @@
       </div>
     </div>
   </div>
-</form>
+</form> -->
