@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/auth';
+import { User } from '../../interfaces/auth';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 

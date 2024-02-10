@@ -19,6 +19,7 @@ import { LoginComponent } from './shell/login/login.component';
 import { RegisterComponent } from './shell/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shell/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     LoginComponent,
     RegisterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,20 +8,5 @@ export const navbarData = [
         routeLink: '',
         icon: 'grid_view',
         label: 'Categories'
-    },
-    {
-        routeLink: '',
-        icon: 'home',
-        label: 'Home'
-    },
-    {
-        routeLink: '',
-        icon: 'home',
-        label: 'Home'
-    },
-    {
-        routeLink: '',
-        icon: 'home',
-        label: 'Home'
     }
 ]
