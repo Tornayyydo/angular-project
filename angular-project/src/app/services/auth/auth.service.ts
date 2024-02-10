@@ -29,10 +29,12 @@ export class AuthService {
   }
 
   registerUser(userDetails: User) {
+    this.isLoggedInSubject = true;
     return this.http.post(`${this.baseUrl}/users`, userDetails);
   }
 
   getUserByEmile(email: string): Observable<User[]> {
+    this.isLoggedInSubject = true;
     return this.http.get<User[]>(`${this.baseUrl}/users?email=${email}`);
   }
 }

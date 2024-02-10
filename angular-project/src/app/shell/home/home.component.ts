@@ -39,7 +39,11 @@ export class HomeComponent implements OnInit{
       } else if (params['tag']){
         this.foods = this.foodService.getAllFoodsByTag(params['tag'])
       } else {
-        this.foods = this.foodService.getAll()
+        for (let i = 0; i < this.foodService.getAll().length; i++) {
+          if (this.foodService.getAll()[i].origins[0] == "persia") {
+            this.foods.push(this.foodService.getAll()[i])
+          }
+        }
       }
     })
   }

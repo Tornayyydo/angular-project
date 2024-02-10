@@ -16,7 +16,7 @@
     </li>
     <li class="sidenav-nav-item footer">
       <ul class="sidenav-nav ftr">
-        <li class="sidenav-nav-item" *ngIf="isLoggedIn()" (click)="onClicked()">
+        <li class="sidenav-nav-item" *ngIf="!isLoggedIn()" (click)="onClicked()">
           <a class="sidenav-nav-link" routerLink="/login">
             <span class="material-symbols-outlined sidenav-link-icon">
               login
@@ -24,7 +24,7 @@
             <span class="sidenav-link-text">Log in</span>
           </a>
         </li>
-        <li class="sidenav-nav-item" (click)="onClicked()">
+        <li class="sidenav-nav-item" (click)="onClicked()" *ngIf="isLoggedIn()">
           <a class="sidenav-nav-link" routerLink="/login" (click)="logout()">
             <span class="material-symbols-outlined sidenav-link-icon">
               logout
@@ -32,19 +32,17 @@
             <span class="sidenav-link-text">Log out</span>
           </a>
         </li>
-        <li class="sidenav-nav-item" *ngIf="isLoggedIn()" (click)="onClicked()">
+        <li class="sidenav-nav-item" *ngIf="!isLoggedIn()" (click)="onClicked()">
           <a class="sidenav-nav-link" routerLink="/register">
             <span class="material-symbols-outlined sidenav-link-icon">
               how_to_reg
             </span>
             <span class="sidenav-link-text">Register</span>
-            <span class="material-symbols-outlined sidenav-link-icon">
-              logout
-            </span>
-            <span class="sidenav-link-text">Log out</span>
           </a>
         </li>
       </ul>
     </li>
   </ul>
 </div>
+
+<div class="dimm" *ngIf="!sidebarService.collapsed"></div>

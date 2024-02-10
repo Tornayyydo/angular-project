@@ -68,7 +68,7 @@ export class FoodService {
           price: 5,
           cookTime: '10-15',
           favorite: false,
-          origins: ['germany'],
+          origins: ['persia'],
           stars: 3.5,
           imageUrl: '../assets/images/burger.webp',
           tags: ['FastFood', 'Hamburger'],
