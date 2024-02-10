@@ -1,12 +1,40 @@
 <div class="sidenav" *ngIf="!sidebarService.collapsed">
     <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <li class="sidenav-nav-item" (click)="onClicked()" *ngFor="let data of navData">
             <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
                 <span class="material-symbols-outlined sidenav-link-icon">
                     {{data.icon}} 
                 </span>
                 <span class="sidenav-link-text" *ngIf="!sidebarService.collapsed">{{data.label}}</span>
             </a>
+        </li>
+        <li class="sidenav-nav-item footer">
+            <ul class="sidenav-nav ftr">
+                <li class="sidenav-nav-item" (click)="onClicked()">
+                    <a class="sidenav-nav-link" routerLink="/login">
+                        <span class="material-symbols-outlined sidenav-link-icon">
+                            login
+                        </span>
+                        <span class="sidenav-link-text">Log in</span>
+                    </a>
+                </li>
+                <li class="sidenav-nav-item" (click)="onClicked()">
+                    <a class="sidenav-nav-link" routerLink="">
+                        <span class="material-symbols-outlined sidenav-link-icon">
+                            logout
+                        </span>
+                        <span class="sidenav-link-text">Log out</span>
+                    </a>
+                </li>
+                <li class="sidenav-nav-item" (click)="onClicked()">
+                    <a class="sidenav-nav-link" routerLink="/login">
+                        <span class="material-symbols-outlined sidenav-link-icon">
+                            how_to_reg
+                        </span>
+                        <span class="sidenav-link-text">Register</span>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>

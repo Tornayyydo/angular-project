@@ -14,7 +14,6 @@ export class SidebarComponent {
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
-    console.log(this.sidebarService.collapsed);
     const target = event.target as HTMLElement;
     const sidebarElement = this.elementRef.nativeElement.querySelector('.sidenav');
     const isClickInsideSidebar = sidebarElement && sidebarElement.contains(target);
@@ -22,5 +21,9 @@ export class SidebarComponent {
     if (!isClickInsideSidebar && !this.sidebarService.collapsed && isBelowHeightLimit) {
       this.sidebarService.collapsed = true
     }
+  }
+
+  onClicked(){
+    this.sidebarService.collapsed = true
   }
 }

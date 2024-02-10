@@ -23,15 +23,5 @@ export const navbarData = [
         routeLink: '',
         icon: 'home',
         label: 'Home'
-    },
-    {
-        routeLink: '',
-        icon: 'login',
-        label: 'Sign In'
-    },
-    {
-        routeLink: '',
-        icon: 'logout',
-        label: 'Log Out'
-    },
+    }
 ]
