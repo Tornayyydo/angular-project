@@ -1,54 +1,73 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import '../../../variables.scss';
 
 .login-form {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 25rem;
+  margin: 4rem auto;
+  margin-bottom: 0;
+  color: $dark-brown;
+  font-size: 1.5rem;
+  h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.315rem;
   font-weight: bold;
 }
 
 input[type="text"],
 input[type="password"] {
+  background-color: $beige;
+  color: $dark-brown;
+  font-size: 1.2rem;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #080000;
-  border-radius: 5px;
+  padding: 0.8rem;
+  border: 2px solid $dark-brown;
+  border-radius: 0.315rem;
+
+  &::placeholder{
+    color: $dark-beige;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .error-message {
-  color: red;
-  font-size: 14px;
+  color: $light-brown;
+  font-size: 1rem;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+.submit-button {
+  padding: 0.625rem 1.25rem;
+  background-color: $dark-brown;
+  color: $beige;
+  font-size: 1.3rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: $dark-beige;
   cursor: not-allowed;
 }
 
 .register-link {
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
 }
 
 .register-link a {
-  color: #007bff;
+  color: $dark-brown;
   text-decoration: none;
 }
 
