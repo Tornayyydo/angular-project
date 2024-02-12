@@ -9,8 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SearchComponent implements OnInit{
   searchTerm:String = ''
   searchMode:Boolean = false;
+  searchCount:number = 0
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute,
+     private router: Router) {
   }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class SearchComponent implements OnInit{
         this.searchMode = true
       }
       this.searchTerm = params['searchTerm']
+      this.searchCount++
     })
   }
 
@@ -29,6 +32,8 @@ export class SearchComponent implements OnInit{
   }
 
   clear():void {
-    this.router.navigateByUrl('/')
+    for (let i = 1; i <= this.searchCount; i++) {
+      window.history.back()
+    }
   }
 }

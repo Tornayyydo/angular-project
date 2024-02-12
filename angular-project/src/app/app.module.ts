@@ -20,6 +20,11 @@ import { RegisterComponent } from './shell/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shell/footer/footer.component';
+import { GeorgiaComponent } from './shell/countries/georgia/georgia.component';
+import { FranceComponent } from './shell/countries/france/france.component';
+import { AmericaComponent } from './shell/countries/america/america.component';
+import { IndiaComponent } from './shell/countries/india/india.component';
+import { ItalyComponent } from './shell/countries/italy/italy.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,11 @@ import { FooterComponent } from './shell/footer/footer.component';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
+    GeorgiaComponent,
+    FranceComponent,
+    AmericaComponent,
+    IndiaComponent,
+    ItalyComponent,
   ],
   imports: [
     BrowserModule,
