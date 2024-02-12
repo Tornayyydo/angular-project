@@ -32,18 +32,14 @@ export class HomeComponent implements OnInit{
     }, 0);
     this.route.params.subscribe(params => {
       if(params['searchTerm']){
-        this.foods = this.foodService.getAllFoodsBySearchTerm(params['searchTerm'])
+        this.foods = this.foodService.getAllFoodsBySearchTermHome(params['searchTerm'])
         if(this.foods.length == 0){
           this.noFood = true
         }
       } else if (params['tag']){
-        this.foods = this.foodService.getAllFoodsByTag(params['tag'])
+        this.foods = this.foodService.getAllFoodsByTagHome(params['tag'])
       } else {
-        for (let i = 0; i < this.foodService.getAll().length; i++) {
-          if (this.foodService.getAll()[i].origins[0] == "persia") {
-            this.foods.push(this.foodService.getAll()[i])
-          }
-        }
+        this.foods = this.foodService.getAll()
       }
     })
   }
