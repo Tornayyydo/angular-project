@@ -1,32 +1,32 @@
 export const navbarData = [
   {
     routeLink: '',
-    icon: 'home',
+    icon: 'restaurant',
     label: 'Home',
   },
   {
     routeLink: 'country/georgia',
-    icon: 'flag',
+    icon: 'wine_bar',
     label: 'Georgia',
   },
   {
     routeLink: 'country/italy',
-    icon: 'flag',
+    icon: 'dinner_dining',
     label: 'Italy',
   },
   {
     routeLink: 'country/france',
-    icon: 'flag',
+    icon: 'bakery_dining',
     label: 'France',
   },
   {
     routeLink: 'country/india',
-    icon: 'flag',
+    icon: 'rice_bowl',
     label: 'India',
   },
   {
     routeLink: 'country/america',
-    icon: 'flag',
+    icon: 'fastfood',
     label: 'America',
   },
 ];
