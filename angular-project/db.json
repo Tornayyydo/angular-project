@@ -29,6 +29,12 @@
       "fullName": "asdasd",
       "email": "asdasd@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "b0a2",
+      "fullName": "sandro",
+      "email": "kurdgelashvili@com",
+      "password": "123"
     }
   ]
 }
