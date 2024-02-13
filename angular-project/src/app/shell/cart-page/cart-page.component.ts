@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { FoodService } from 'src/app/services/food/food.service';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
@@ -14,12 +15,17 @@ export class CartPageComponent implements OnInit{
   cart!:Cart
   constructor(private cartService: CartService,
      private foodService: FoodService,
-     private sidebarService: SidebarService) {
+     private sidebarService: SidebarService,
+     private authService: AuthService) {
     this.setCart()
   }
 
   ngOnInit(): void {
     this.sidebarService.collapsed = true
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
   removeFromCart(cartItem:CartItem) {
