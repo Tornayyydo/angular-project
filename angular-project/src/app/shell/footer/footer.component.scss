@@ -48,13 +48,17 @@
         }
 
         .icons {
-            span {
-                border-radius: 50%;
-                padding: 0.3rem;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    background-color: $light-brown;
+            a {
+                color: inherit;
+                text-decoration: none;
+                span {
+                    border-radius: 50%;
+                    padding: 0.3rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: $light-brown;
+                    }
                 }
             }
         }

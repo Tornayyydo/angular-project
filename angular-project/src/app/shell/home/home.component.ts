@@ -35,6 +35,8 @@ export class HomeComponent implements OnInit{
         this.foods = this.foodService.getAllFoodsBySearchTermHome(params['searchTerm'])
         if(this.foods.length == 0){
           this.noFood = true
+        } else {
+          this.noFood = false
         }
       } else if (params['tag']){
         this.foods = this.foodService.getAllFoodsByTagHome(params['tag'])
