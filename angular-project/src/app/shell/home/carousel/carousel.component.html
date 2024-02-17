@@ -1,0 +1,13 @@
+<div class="carousel">
+    <span class="material-symbols-outlined prev" (click)="GoToPrevious()">
+        arrow_back_ios
+    </span>
+    <span class="material-symbols-outlined next" (click)="GoToNext()">
+        arrow_forward_ios
+    </span>
+    <ul *ngFor="let source of photos">
+        <li class="slide">
+            <img [src]="source.src" alt="">
+        </li>
+    </ul>
+</div>

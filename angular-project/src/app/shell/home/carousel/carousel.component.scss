@@ -1,0 +1,54 @@
+@import '../../../../variables.scss';
+
+.carousel {
+    width: 80vw;
+    height: 75vh;
+    position: relative;
+    margin-bottom: 2rem;
+    .slide {
+        position: absolute;
+        inset: 0;
+        transition: opacity 0.5s ease-in-out;
+        > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 2rem;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .material-symbols-outlined {
+        position: absolute;
+        background: none;
+        border: none;
+        font-size: 4rem;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
+        color: $beige;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        padding: 0 0.5rem;
+
+        &:hover,:focus {
+            color: $dark-beige;
+        }
+    }
+
+    .prev {
+        left: 2rem;
+    }
+
+    .next {
+        right: 1rem;
+    }
+}
+

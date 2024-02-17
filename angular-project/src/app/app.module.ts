@@ -25,39 +25,44 @@ import { FranceComponent } from './shell/countries/france/france.component';
 import { AmericaComponent } from './shell/countries/america/america.component';
 import { IndiaComponent } from './shell/countries/india/india.component';
 import { ItalyComponent } from './shell/countries/italy/italy.component';
+import { WelcomeComponent } from './shell/home/welcome/welcome.component';
+import { CarouselComponent } from './shell/home/carousel/carousel.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShellComponent,
-    HeaderComponent,
-    SidebarComponent,
-    HomeComponent,
-    StarRatingComponent,
-    SearchComponent,
-    TagsComponent,
-    FoodPageComponent,
-    CartPageComponent,
-    NotFoundComponent,
-    LoginComponent,
-    RegisterComponent,
-    FooterComponent,
-    GeorgiaComponent,
-    FranceComponent,
-    AmericaComponent,
-    IndiaComponent,
-    ItalyComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        ShellComponent,
+        HeaderComponent,
+        SidebarComponent,
+        HomeComponent,
+        StarRatingComponent,
+        SearchComponent,
+        TagsComponent,
+        FoodPageComponent,
+        CartPageComponent,
+        NotFoundComponent,
+        LoginComponent,
+        RegisterComponent,
+        FooterComponent,
+        GeorgiaComponent,
+        FranceComponent,
+        AmericaComponent,
+        IndiaComponent,
+        ItalyComponent,
+        WelcomeComponent,
+        CarouselComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientModule,
+    ]
 })
-export class AppModule {}
+export class AppModule {
+}
