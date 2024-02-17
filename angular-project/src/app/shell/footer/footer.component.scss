@@ -21,18 +21,41 @@
         .about {
             max-width: 50%;
             padding: 2rem;
-            margin: 0 1.5rem;
+            font-size: 1.2rem;
         }
 
         .add-info {
             max-width: 50%;
             display: flex;
             justify-content: space-evenly;
-            div {
-                padding: 2rem;
-            }
+            margin: 0 2rem;
             .categories {
-                margin: 0 1.5rem;
+                padding: 0 2.5rem;
+                margin: 2rem;
+                font-size: 1.2rem;
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    display: block;
+                    position: relative;
+                    padding: 0.3rem 0;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0.3rem;
+                        left: 0;
+                        width: 70%;
+                        height: 0.1rem;
+                        background-color: $dark-beige;
+                        opacity: 0;
+                        transition: opacity 300ms, transform 300ms;
+                    }
+                      
+                    &:hover::after, a:focus::after {
+                        opacity: 1;
+                        transform: translate3d(0, 0.2em, 0);
+                    }
+                }
             }
         }
     }

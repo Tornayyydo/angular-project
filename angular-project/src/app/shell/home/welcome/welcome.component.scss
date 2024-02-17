@@ -1,0 +1,15 @@
+@import '../../../../variables.scss';
+
+div {
+    height: auto;
+    background-color: $dark-brown;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    h1 {
+        color: $beige;
+        margin-top: 1rem;
+        font-size: 2.2rem;
+        text-align: center;
+        padding: 1rem 4rem;
+    }
+}

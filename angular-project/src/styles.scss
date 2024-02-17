@@ -1,3 +1,11 @@
+
+// Uncomment the following lines if you want to add a custom palette:
+// $primary: #731963 !default;
+// $secondary: #ce5712 !default;
+// $app-palette: palette($primary, $secondary, $surface);
+
+/* autoprefixer grid: on */
+
 @import "src/variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 

@@ -10,7 +10,7 @@ header {
 
 .container {
     display: flex;
-    height: 5.5rem;
+    height: 6rem;
     border-bottom: 0.25rem solid $dark-brown;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +18,7 @@ header {
         flex: 0;
         align-self: center;
         font-family: 'Protest Revolution', sans-serif;
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: 600;
         color: $dark-brown;
     }
