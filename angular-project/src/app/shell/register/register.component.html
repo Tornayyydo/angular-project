@@ -10,7 +10,7 @@
       type="text"
       name="fullName"
       formControlName="fullName"
-      placeholder="Enter your full name"
+      placeholder="Enter your full name:"
       class="form-control"
     />
     <small
@@ -27,7 +27,7 @@
       type="text"
       name="email"
       formControlName="email"
-      placeholder="Enter your email"
+      placeholder="Enter your email:"
       class="form-control"
     />
     <small *ngIf="emile.invalid && (emile.dirty || emile.touched)">
@@ -43,8 +43,9 @@
       type="password"
       name="password"
       formControlName="password"
-      placeholder="Enter your password"
+      placeholder="Enter your password:"
       class="form-control"
+      minlength="6"
     />
     <small
       *ngIf="password.invalid && (password.dirty || password.touched)"
@@ -53,14 +54,16 @@
       <div *ngIf="password.errors?.['required']">Password is required</div>
     </small>
   </div>
+
   <div class="form-group">
     <label for="confirmPassword">Confirm Password:</label>
     <input
       type="password"
       name="confirmPassword"
       formControlName="confirmPassword"
-      placeholder="Confirm your password"
+      placeholder="Confirm your password:"
       class="form-control"
+      minlength="6"
     />
     <small
       *ngIf="
@@ -79,11 +82,8 @@
       >Passwords must match</small
     >
   </div>
-  <button
-    type="submit"
-    [disabled]="registerForm.invalid"
-    class="submit-button"
-  >
+
+  <button type="submit" [disabled]="registerForm.invalid" class="submit-button">
     Register
   </button>
   <div class="login-link">

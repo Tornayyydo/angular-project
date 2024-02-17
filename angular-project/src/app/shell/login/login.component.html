@@ -33,6 +33,8 @@
       <div *ngIf="password.errors?.['required']">Password is required</div>
     </small>
   </div>
+  <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+
   <button type="submit" [disabled]="loginForm.invalid" class="submit-button">
     Sign In
   </button>
