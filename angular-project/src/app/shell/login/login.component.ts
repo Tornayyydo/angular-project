@@ -14,6 +14,8 @@ export class LoginComponent {
     password: ['', Validators.required],
   });
 
+  loginError: string = '';
+
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -34,6 +36,8 @@ export class LoginComponent {
       if (res.length > 0 && res[0].password === password) {
         localStorage.setItem('email', email as string);
         this.router.navigate(['home']);
+      } else {
+        this.loginError = 'Email or Password is incorrect';
       }
     });
   }
