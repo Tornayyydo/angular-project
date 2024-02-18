@@ -15,12 +15,17 @@ header {
     justify-content: space-between;
     align-items: center;
     a {
+        cursor: pointer;
         flex: 0;
-        align-self: center;
         font-family: 'Protest Revolution', sans-serif;
         font-size: 4.5rem;
         font-weight: 600;
         color: $dark-brown;
+        svg {
+            margin-top: 1rem;
+            stroke-dasharray: 300;
+            animation: 3s fillSvg linear;
+        }
     }
     .left-side {
         flex: 1;
@@ -62,3 +67,11 @@ header {
     }
 }
 
+@keyframes fillSvg{
+    0%{
+        stroke-dashoffset: 300;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
