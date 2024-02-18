@@ -32,8 +32,8 @@
     />
     <small *ngIf="emile.invalid && (emile.dirty || emile.touched)">
       <div *ngIf="emile.errors?.['required']">Email is required</div>
-      <div *ngIf="emile.errors?.['emile']" style="color: red">
-        Emile should be valid
+      <div *ngIf="emile.errors?.['emile']">
+        Email should be valid
       </div>
     </small>
   </div>
@@ -45,7 +45,7 @@
       formControlName="password"
       placeholder="Enter your password:"
       class="form-control"
-      minlength="6"
+      minlength="8"
     />
     <small
       *ngIf="password.invalid && (password.dirty || password.touched)"
@@ -63,7 +63,7 @@
       formControlName="confirmPassword"
       placeholder="Confirm your password:"
       class="form-control"
-      minlength="6"
+      minlength="8"
     />
     <small
       *ngIf="

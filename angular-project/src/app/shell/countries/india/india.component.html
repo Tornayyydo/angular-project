@@ -11,16 +11,6 @@
           <div class="name">
             {{ food.name }}
           </div>
-          <span
-            class="{{
-              food.favorite
-                ? 'material-symbols-outlined filled'
-                : 'material-symbols-outlined'
-            }}"
-            (click)="onClick(food)"
-          >
-            favorite
-          </span>
           <div class="stars">
             <star-rating [stars]="food.stars" />
           </div>
