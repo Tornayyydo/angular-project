@@ -1,8 +1,8 @@
 <div class="no-access" *ngIf="!isLoggedIn()">
-    You need to Log in to access the cart page
+    Log in to access the cart page
     <div>
-        <a routerLink="/login">Go to Login Page</a>
-        <a routerLink="/register">Go to Register Page</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
     </div>
 </div>
 <app-not-found [visible]="!cart || cart.items.length <= 0 && isLoggedIn()"

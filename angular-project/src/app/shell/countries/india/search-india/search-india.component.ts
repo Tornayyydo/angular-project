@@ -1,12 +1,12 @@
-import {  Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  selector: 'app-search-india',
+  templateUrl: './search-india.component.html',
+  styleUrls: ['./search-india.component.scss']
 })
-export class SearchComponent implements OnInit{
+export class SearchIndiaComponent {
   searchTerm:String = ''
   searchMode:Boolean = false;
 
@@ -25,11 +25,11 @@ export class SearchComponent implements OnInit{
 
   search():void{
     if(this.searchTerm){
-      this.router.navigateByUrl('/search/' + this.searchTerm)
+      this.router.navigateByUrl('/country/india/search/' + this.searchTerm)
     }
   }
 
   clear():void {
-      this.router.navigateByUrl('/search/');
+      this.router.navigateByUrl('/country/india/search/');
   }
 }

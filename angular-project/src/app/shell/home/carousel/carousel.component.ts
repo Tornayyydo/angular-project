@@ -24,7 +24,7 @@ export class CarouselComponent {
       src: "../../../../assets/carousel/burger.jpg"
     }
   ]
-
+  
   GoToPrevious() {
     let visible = this.photos[this.photos.length-1]
     for(let i = this.photos.length-1; i >= 0; i--){

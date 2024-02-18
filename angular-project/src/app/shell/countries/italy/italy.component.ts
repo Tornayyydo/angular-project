@@ -28,6 +28,8 @@ export class ItalyComponent {
         this.foods = this.foodService.getAllFoodsBySearchTerm(params['searchTerm'],"italy")
         if(this.foods.length == 0){
           this.noFood = true
+        } else {
+          this.noFood = false
         }
       } else if (params['tag']){
         this.foods = this.foodService.getAllFoodsByTag(params['tag'],"italy")
