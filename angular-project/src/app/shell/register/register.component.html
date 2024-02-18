@@ -30,11 +30,12 @@
       placeholder="Enter your email:"
       class="form-control"
     />
-    <small *ngIf="emile.invalid && (emile.dirty || emile.touched)">
+    <small
+      *ngIf="emile.invalid && (emile.dirty || emile.touched)"
+      class="error-message"
+    >
       <div *ngIf="emile.errors?.['required']">Email is required</div>
-      <div *ngIf="emile.errors?.['emile']">
-        Email should be valid
-      </div>
+      <div *ngIf="emile.errors?.['email']">Email should be valid</div>
     </small>
   </div>
   <div class="form-group">
@@ -47,11 +48,15 @@
       class="form-control"
       minlength="8"
     />
+
     <small
       *ngIf="password.invalid && (password.dirty || password.touched)"
       class="error-message"
     >
       <div *ngIf="password.errors?.['required']">Password is required</div>
+      <div *ngIf="password.errors?.['minlength']">
+        Please enter at least 8 characters
+      </div>
     </small>
   </div>
 
@@ -63,7 +68,6 @@
       formControlName="confirmPassword"
       placeholder="Confirm your password:"
       class="form-control"
-      minlength="8"
     />
     <small
       *ngIf="
@@ -77,10 +81,11 @@
       </div>
     </small>
     <small
-      *ngIf="registerForm.errors?.['passwordMismatch']"
+      *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid"
       class="error-message"
-      >Passwords must match</small
     >
+      Passwords must match
+    </small>
   </div>
 
   <button type="submit" [disabled]="registerForm.invalid" class="submit-button">

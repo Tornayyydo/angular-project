@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/auth';
@@ -22,7 +22,7 @@ export class RegisterComponent {
       confirmPassword: ['', Validators.required],
     },
     {
-      Validators: passwordMatchValidator,
+      validators: passwordMatchValidator,
     }
   );
 
