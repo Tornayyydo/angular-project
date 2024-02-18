@@ -32,6 +32,9 @@ export class HomeComponent implements OnInit{
     }, 0);
     this.route.params.subscribe(params => {
       if(params['searchTerm']){
+        setTimeout(() => {
+          window.scrollTo({ top: 875, behavior: 'auto' });
+        }, 1);
         this.foods = this.foodService.getAllFoodsBySearchTermHome(params['searchTerm'])
         if(this.foods.length == 0){
           this.noFood = true
@@ -39,6 +42,9 @@ export class HomeComponent implements OnInit{
           this.noFood = false
         }
       } else if (params['tag']){
+        setTimeout(() => {
+          window.scrollTo({ top: 875, behavior: 'auto' });
+        }, 1);
         this.foods = this.foodService.getAllFoodsByTagHome(params['tag'])
       } else {
         this.foods = this.foodService.getAll()
