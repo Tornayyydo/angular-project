@@ -45,3 +45,12 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: $light-brown;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $dark-brown !important;
+    -webkit-box-shadow: 0 0 0px 1000px $dark-beige inset !important;
+}

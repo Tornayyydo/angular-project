@@ -22,10 +22,15 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'country/georgia', component: GeorgiaComponent},
+  { path: 'country/georgia/search/:searchTerm', component: GeorgiaComponent},
   { path: 'country/france', component: FranceComponent},
+  { path: 'country/france/search/:searchTerm', component: FranceComponent},
   { path: 'country/america', component: AmericaComponent},
+  { path: 'country/america/search/:searchTerm', component: AmericaComponent},
   { path: 'country/india', component: IndiaComponent},
+  { path: 'country/india/search/:searchTerm', component: IndiaComponent},
   { path: 'country/italy', component: ItalyComponent},
+  { path: 'country/italy/search/:searchTerm', component: ItalyComponent},
 
 
 

@@ -27,6 +27,11 @@ import { IndiaComponent } from './shell/countries/india/india.component';
 import { ItalyComponent } from './shell/countries/italy/italy.component';
 import { WelcomeComponent } from './shell/home/welcome/welcome.component';
 import { CarouselComponent } from './shell/home/carousel/carousel.component';
+import { SearchItalyComponent } from './shell/countries/italy/search-italy/search-italy.component';
+import { SearchIndiaComponent } from './shell/countries/india/search-india/search-india.component';
+import { SearchGeorgiaComponent } from './shell/countries/georgia/search-georgia/search-georgia.component';
+import { SearchFranceComponent } from './shell/countries/france/search-france/search-france.component';
+import { SearchAmericaComponent } from './shell/countries/america/search-america/search-america.component';
 
 @NgModule({
     declarations: [
@@ -51,6 +56,11 @@ import { CarouselComponent } from './shell/home/carousel/carousel.component';
         ItalyComponent,
         WelcomeComponent,
         CarouselComponent,
+        SearchItalyComponent,
+        SearchIndiaComponent,
+        SearchGeorgiaComponent,
+        SearchFranceComponent,
+        SearchAmericaComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
