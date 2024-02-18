@@ -1,4 +1,4 @@
-@import '../../../variables.scss';
+@import "../../../variables.scss";
 
 .register-form {
   max-width: 25rem;
@@ -6,7 +6,7 @@
   margin-bottom: 0;
   color: $dark-brown;
   font-size: 1.5rem;
-  h1{
+  h1 {
     margin-bottom: 1rem;
   }
 }
@@ -31,7 +31,7 @@ input[type="password"] {
   border: 2px solid $dark-brown;
   border-radius: 0.3125rem;
 
-  &::placeholder{
+  &::placeholder {
     color: $dark-beige;
   }
 
