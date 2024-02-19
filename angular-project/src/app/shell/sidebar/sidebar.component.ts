@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 import { navbarData } from './nav-data';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,7 +13,8 @@ export class SidebarComponent {
   constructor(
     public sidebarService: SidebarService,
     private elementRef: ElementRef,
-    private authService: AuthService
+    private authService: AuthService,
+    private cartService: CartService
   ) {}
 
   navData = navbarData;
@@ -22,6 +24,7 @@ export class SidebarComponent {
   }
 
   logout() {
+    this.cartService.getCart().items = []
     this.authService.logoutUser();
   }
 
