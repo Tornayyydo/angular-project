@@ -9,37 +9,60 @@ import { CartItem } from 'src/app/shared/models/CartItem';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
-  styleUrls: ['./cart-page.component.scss']
+  styleUrls: ['./cart-page.component.scss'],
 })
-export class CartPageComponent implements OnInit{
-  cart!:Cart
-  constructor(private cartService: CartService,
-     private foodService: FoodService,
-     private sidebarService: SidebarService,
-     private authService: AuthService) {
-    this.setCart()
+export class CartPageComponent implements OnInit {
+  cart!: Cart;
+
+  constructor(
+    private cartService: CartService,
+    private foodService: FoodService,
+    private sidebarService: SidebarService,
+    private authService: AuthService
+  ) {
+    this.setCart();
   }
+  num: number = 1;
+  zero: string = 'material-symbols-outlined zero';
 
   ngOnInit(): void {
-    this.sidebarService.collapsed = true
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    this.sidebarService.collapsed = true;
   }
 
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }
 
-  removeFromCart(cartItem:CartItem) {
-    this.cartService.removeFromCart(cartItem.food.id)
-    this.setCart()
+  removeFromCart(cartItem: CartItem) {
+    this.cartService.removeFromCart(cartItem.food.id);
+    this.setCart();
   }
 
-  changeQuantity(cartItem:CartItem, quantityInString:string){
-    const quantity = parseInt(quantityInString)
-    this.cartService.changeQuantity(cartItem.food.id, quantity)
-    this.setCart()
+  changeQuantity(cartItem: CartItem, quantity: number) {
+    this.cartService.changeQuantity(cartItem.food.id, quantity);
+    this.setCart();
   }
 
-  setCart(){
-    this.cart = this.cartService.getCart()
+  setCart() {
+    this.cart = this.cartService.getCart();
+  }
+
+  remove(cartItem: CartItem) {
+    if (this.num == 2) {
+      this.zero = 'material-symbols-outlined zero';
+      this.num--;
+    } else if (this.num == 1) {
+      this.zero = 'material-symbols-outlined zero';
+    } else {
+      this.num--;
+    }
+    this.changeQuantity(cartItem, this.num);
+  }
+
+  add(cartItem: CartItem) {
+    this.num++;
+    this.zero = 'material-symbols-outlined';
+    this.changeQuantity(cartItem, this.num);
   }
 }

@@ -1,49 +1,57 @@
 <div class="no-access" *ngIf="!isLoggedIn()">
-    Log in to access the cart page
-    <div>
-        <a routerLink="/login">Login</a>
-        <a routerLink="/register">Register</a>
-    </div>
+  Log in to access the cart page
+  <div>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+  </div>
 </div>
-<app-not-found [visible]="!cart || cart.items.length <= 0 && isLoggedIn()"
-notFoundMessage="Cart Page Is Empty!"
-resetLinkText="Go To Homepage"
+<app-not-found
+  [visible]="!cart || (cart.items.length <= 0 && isLoggedIn())"
+  notFoundMessage="Cart Page Is Empty!"
+  resetLinkText="Go To Homepage"
 ></app-not-found>
 <div *ngIf="cart && cart.items.length > 0 && isLoggedIn()" class="container">
-    <div class="cont">
-        <div *ngFor="let cartItem of cart.items" class="cart-items">
-            <div>
-                <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
-            </div>
-            <div>
-                <a routerLink="/food/{{cartItem.food.id}}">
-                    {{cartItem.food.name}}
-                </a>
-            </div>
-            <div>
-                <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div>
-                {{cartItem.price | currency }}
-            </div>
-            <div>
-                <button class="remove-button" (click)="removeFromCart(cartItem)">
-                    Remove
-                </button>
-            </div>
-        </div>
+  <div class="cont">
+    <div *ngFor="let cartItem of cart.items" class="cart-items">
+      <div>
+        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+      </div>
+      <div>
+        <a routerLink="/food/{{ cartItem.food.id }}">
+          {{ cartItem.food.name }}
+        </a>
+      </div>
+      <div class="number-div">
+        <span
+          class="material-symbols-outlined"
+          (click)="remove(cartItem)"
+          [class]="zero"
+        >
+          remove
+        </span>
+
+        <p #quantitySelect>
+          {{ num }}
+        </p>
+        <span class="material-symbols-outlined" (click)="add(cartItem)">
+          add
+        </span>
+      </div>
+      <div>
+        {{ cartItem.price | currency }}
+      </div>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
     </div>
-    
-    <div class="checkout">
-        <div>
-            <div class="foods-count">{{cart.items.length}}</div>
-            <div class="total-price">{{cart.totalPrice | currency}}</div>
-        </div>
+  </div>
+
+  <div class="checkout">
+    <div>
+      <div class="foods-count">{{ cart.items.length }}</div>
+      <div class="total-price">{{ cart.totalPrice | currency }}</div>
     </div>
+  </div>
 </div>
