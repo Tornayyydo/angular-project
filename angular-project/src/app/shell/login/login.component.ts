@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
@@ -22,6 +22,9 @@ export class LoginComponent {
     private router: Router
   ) {}
 
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
   get emile() {
     return this.loginForm.controls['email'];
   }

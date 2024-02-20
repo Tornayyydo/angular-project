@@ -1,52 +1,10 @@
 {
   "users": [
     {
-      "id": "2b2b",
-      "fullName": "nodo",
-      "email": "nodo@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "3a41",
+      "id": "ea53",
       "fullName": "nodari",
-      "email": "test@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "77cb",
-      "fullName": "sandro",
-      "email": "sandrosandala22@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e080",
-      "fullName": "sandro",
-      "email": "sandrosandala123@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e593",
-      "fullName": "asdasd",
-      "email": "asdasd@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "b0a2",
-      "fullName": "sandro",
-      "email": "kurdgelashvili@com",
-      "password": "123"
-    },
-    {
-      "id": "a3fa",
-      "fullName": "lela",
-      "email": "lelalela123@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e801",
-      "fullName": "lela",
-      "email": "lelalela123@gmail.com",
-      "password": "123"
+      "email": "nodo@gmail.com",
+      "password": "12345678"
     }
   ]
 }

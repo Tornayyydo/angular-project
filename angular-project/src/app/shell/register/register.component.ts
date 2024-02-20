@@ -10,7 +10,7 @@ import { passwordMatchValidator } from 'src/app/shared/models/password-match.dir
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
   registerForm = this.fb.group(
     {
       fullName: [
@@ -31,6 +31,10 @@ export class RegisterComponent {
     private authService: AuthService,
     private router: Router
   ) {}
+
+  ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
 
   get fullName() {
     return this.registerForm.controls['fullName'];
